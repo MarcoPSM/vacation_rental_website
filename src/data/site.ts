@@ -1,7 +1,7 @@
 export const site = {
-  name: "DoceSal",
+  name: "CasasDoceMar",
   description: "Alojamento Local",
-  url: "https://docesal.pt",
+  url: "https://casasdocemar.pt",
   language: "pt-PT",
 
   contact: {
