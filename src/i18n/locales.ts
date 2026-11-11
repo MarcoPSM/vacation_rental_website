@@ -7,7 +7,7 @@
  * 3. add `es: '...'` next to every translated text in `villa.config.ts`,
  * 4. add `'es'` to `languages.active` in `villa.config.ts`.
  */
-export const SUPPORTED_LOCALES = ['fr', 'en', 'it', 'de'] as const;
+export const SUPPORTED_LOCALES = ['fr', 'en', 'it', 'de', 'pt'] as const;
 
 export type Locale = (typeof SUPPORTED_LOCALES)[number];
 
@@ -27,6 +27,7 @@ export const LOCALE_META: Record<Locale, LocaleMeta> = {
   en: { nativeName: 'English', short: 'EN', bcp47: 'en-GB', ogLocale: 'en_GB' },
   it: { nativeName: 'Italiano', short: 'IT', bcp47: 'it-IT', ogLocale: 'it_IT' },
   de: { nativeName: 'Deutsch', short: 'DE', bcp47: 'de-DE', ogLocale: 'de_DE' },
+  pt: { nativeName: 'Português', short: 'PT', bcp47: 'pt-PT', ogLocale: 'pt_PT' },
 };
 
 export function isLocale(value: unknown): value is Locale {
