@@ -4,7 +4,7 @@ import type { Locale } from './locales.ts';
  * Flags of the language menu, drawn inline (no image file, no request to another site).
  * Each drawing fills a 32 × 32 square; the component crops it into a circle.
  */
-export const FLAG_CODES = ['fr', 'be', 'ch', 'gb', 'us', 'ie', 'it', 'de', 'at', 'es'] as const;
+export const FLAG_CODES = ['fr', 'be', 'ch', 'gb', 'us', 'ie', 'it', 'de', 'at', 'es', 'pt'] as const;
 
 export type FlagCode = (typeof FLAG_CODES)[number];
 
@@ -14,6 +14,7 @@ export const DEFAULT_FLAGS: Record<Locale, FlagCode> = {
   en: 'gb',
   it: 'it',
   de: 'de',
+  pt: 'pt',
 };
 
 export function flagFor(locale: Locale, overrides: Partial<Record<Locale, FlagCode>> = {}): FlagCode {
@@ -46,4 +47,9 @@ export const FLAG_SVG: Record<FlagCode, string> = {
     '<path d="M16 0V32M0 16H32" stroke="#fff" stroke-width="10"/>' +
     '<path d="M16 0V32M0 16H32" stroke="#C8102E" stroke-width="6"/>',
   us: `<rect width="32" height="32" fill="#fff"/>${usStripes}<rect width="14" height="${(7 * 32) / 13}" fill="#3C3B6E"/>${usStars}`,
+  pt:   '<rect width="32" height="32" fill="#FF0000"/>' +
+  '<rect width="13" height="32" fill="#006600"/>' +
+  '<circle cx="13" cy="16" r="5.5" fill="#FFCC00"/>' +
+  '<circle cx="13" cy="16" r="3.5" fill="#FF0000"/>' +
+  '<circle cx="13" cy="16" r="2.5" fill="#FFFFFF"/>',
 };

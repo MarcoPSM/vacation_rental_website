@@ -29,8 +29,9 @@ export const villa = defineVilla({
 
   languages: {
     // The language of the home page at "/".
-    default: 'en',
-    active: ['en', 'pt'],
+    default: 'pt',
+    active: ['pt', 'en'],
+   
     // Flag of each language in the language menu. English shows the UK flag; for the US: { en: 'us' }.
     flags: {},
   },
@@ -139,14 +140,14 @@ export const villa = defineVilla({
       en: 'Book direct a 4-bedroom villa with an infinity pool facing the sea in Ramatuelle, near Saint-Tropez. Sleeps 8, from €650 a night, no booking fees.',
       pt: 'Alugue diretamente uma villa de 4 quartos com piscina infinita voltada para o mar em Ramatuelle, perto de Saint-Tropez. Acomoda 8 pessoas, a partir de €650 por noite, sem taxas de reserva.',
     },
-    shareImage: 'hero.jpg',
+    shareImage: 'hero.png',
     // Google forbids marking up ratings copied from Airbnb or Booking.com: keep false unless
     // your reviews are collected on your own site (source: 'direct').
     reviewsInStructuredData: false,
   },
 
   hero: {
-    image: 'hero.jpg',
+    image: 'hero.png',
     imageAlt: {
       en: 'The infinity pool facing the turquoise sea',
       pt: 'A piscina infinita voltada para o mar turquesa',
@@ -244,7 +245,7 @@ export const villa = defineVilla({
   // Google asks for at least 8 photos, including a bedroom, a bathroom and a common area.
   gallery: [
     {
-      image: 'hero.jpg',
+      image: 'hero.png',
       category: 'pool',
       alt: {
         en: 'The infinity pool facing the turquoise sea',

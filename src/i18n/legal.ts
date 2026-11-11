@@ -330,7 +330,79 @@ const de = (f: Facts): LegalTexts => ({
   updated: (d) => `Zuletzt aktualisiert: ${d}`,
 });
 
-const TEMPLATES: Record<Locale, (f: Facts) => LegalTexts> = { fr, en, it, de };
+
+const pt = (f: Facts): LegalTexts => ({
+  legalTitle: 'Legal notice',
+  legalSections: [
+    {
+      heading: 'Publisher',
+      paragraphs: f.noticeUrl
+        ? [`The legal notice of the publisher of this site is published at: ${f.noticeUrl}`, `Contact: ${f.email}${f.phone ? `, ${f.phone}` : ''}.`]
+        : [
+            `${f.publisher}, ${f.address}.${f.companyId ? ` ${f.companyId}.` : ''}`,
+            `Contact: ${f.email}${f.phone ? `, ${f.phone}` : ''}.`,
+            `Publication director: ${f.director}.`,
+          ],
+    },
+    { heading: 'Hosting', paragraphs: [f.host] },
+    {
+      heading: 'Holiday rental',
+      paragraphs: [`${f.villa}, ${f.locality}.${f.registration ? ` Tourist rental registration number: ${f.registration}.` : ''}`],
+    },
+    {
+      heading: 'Intellectual property',
+      paragraphs: ['The texts and photos on this site are protected. Any reproduction without written permission is forbidden.'],
+    },
+  ],
+  privacyTitle: 'Privacy policy',
+  privacySections: [
+    { heading: 'Data controller',
+      paragraphs: [
+        f.noticeUrl
+          ? `The publisher of this site, identified in its legal notice: ${f.noticeUrl}. Contact: ${f.email}.`
+          : `${f.publisher}, ${f.address}. Contact: ${f.email}.`,
+      ],
+    },
+    {
+      heading: 'Data collected and purpose',
+      paragraphs: [
+        'The booking request form collects your name, email, phone number (optional), dates, number of guests and message.',
+        'This data is only used to answer your request and, if you book, to prepare your stay. Legal basis: steps taken at your request before entering into a contract (GDPR article 6(1)(b)).',
+      ],
+    },
+    {
+      heading: 'Recipients',
+      paragraphs: [
+        f.formService
+          ? `Your data is read by the owner of the house. The form goes through the ${f.formService} sending service, which forwards your message to us by email.`
+          : 'Your data is read by the owner of the house.',
+        'If you write to us by WhatsApp or email, those services handle your messages under their own rules.',
+      ],
+    },
+    {
+      heading: 'Retention',
+      paragraphs: ['Three years after our last exchange. If you book, contracts and invoices are kept for the period required by law.'],
+    },
+    {
+      heading: 'Cookies and analytics',
+      paragraphs: [
+        'This site sets no cookies and uses no analytics or advertising. Fonts are hosted on this site: no data is sent to Google Fonts.',
+        'The hosting provider may log technical data (IP address, date, page requested) to keep the service secure.',
+      ],
+    },
+    {
+      heading: 'Your rights',
+      paragraphs: [
+        `You can access, correct or delete your data, object to its use or ask for a copy by writing to ${f.email}.`,
+        'You can also contact the data protection authority of your country.',
+      ],
+    },
+  ],
+  creditsHeading: 'Photo credits',
+  updated: (d) => `Last updated: ${d}`,
+});
+
+const TEMPLATES: Record<Locale, (f: Facts) => LegalTexts> = { fr, en, it, de, pt };
 
 /** Shown where the owner has not filled in a legal detail yet. */
 const TO_COMPLETE: Record<Locale, string> = {
@@ -338,6 +410,7 @@ const TO_COMPLETE: Record<Locale, string> = {
   en: '[to complete]',
   it: '[da completare]',
   de: '[zu ergänzen]',
+  pt: '[a completar]',
 };
 
 export function legalTexts(locale: Locale, villa: Villa, t: (field: Villa['property']['tagline'] | undefined) => string): LegalTexts {
