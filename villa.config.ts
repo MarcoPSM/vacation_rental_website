@@ -19,12 +19,12 @@ import { defineVilla } from './src/config/define.ts';
 export const villa = defineVilla({
   site: {
     // Public address of the site, without trailing slash.
-    url: 'https://villa-calanque.example.com',
-    // Demo only. Delete these lines for a real property.
-    demoNotice: {
+    url: 'https://casasdocemar.pt/',
+    // Descomentar para que o texto apareca no site. O texto é mostrado no rodapé do site.
+/*     demoNotice: {
       en: 'Demo site of the Riviera Themes theme. Villa Calanque is fictional: its address, prices, reviews and registration number are made up. Royalty-free photos.',
       pt: 'Site de demonstração do tema Riviera Themes. A Villa Calanque é fictícia: o endereço, os preços, as avaliações e o número de registo são inventados. Fotografias livres de direitos.',
-    },
+    }, */
   },
 
   languages: {
@@ -45,15 +45,15 @@ export const villa = defineVilla({
   sections: {
     house: true,
     gallery: true,
-    bedrooms: true,
-    amenities: true,
-    area: true,
-    rates: true,
-    reviews: true,
-    availability: true,
-    booking: true,
-    faq: true,
-    rules: true,
+    bedrooms: false,
+    amenities: false,
+    area: false,
+    rates: false,
+    reviews: false,
+    availability: false,
+    booking: false,
+    faq: false,
+    rules: false,
   },
 
   theme: {
@@ -72,51 +72,49 @@ export const villa = defineVilla({
   },
 
   property: {
-    name: 'Villa Calanque',
+    name: 'Doce Mar',
     // Never change this id once the site is online (Google uses it to recognise the listing).
-    id: 'villa-calanque-ramatuelle',
-    type: 'Villa',
+    id: 'casasdocemar-carolinamar',
+    type: 'Apartment',
     tagline: {
-      en: 'Villa with an infinity pool facing the sea, in Ramatuelle',
-      pt: 'Villa com piscina infinita virada para o mar, em Ramatuelle',
+      en: 'Three-bedroom apartment with sea views, 1 km from the beach',
+      pt: 'Apartamento T3 com vista mar, a 1 km da praia',
     },
     address: {
-      street: 'Chemin des Crêtes (adresse fictive)',
-      postalCode: '83350',
-      locality: 'Ramatuelle',
-      region: 'Provence-Alpes-Côte d’Azur',
-      country: 'FR',
+      street: 'Rua das Sete Casas',
+      postalCode: '8900-038',
+      locality: 'Manta Rota',
+      region: 'Vila Nova de Cacela',
+      country: 'PT',
     },
     // At least 5 decimals. Right-click the house in Google Maps or OpenStreetMap to copy them.
     // If a value ends with 0, write it as a string so the 0 is kept: '43.22130'.
-    geo: { latitude: 43.22134, longitude: 6.63457 },
-    timeZone: 'Europe/Paris',
+    geo: { latitude: 37.166505, longitude: 7.522084 },
+    timeZone: 'Europe/Lisbon',
     currency: 'EUR',
     capacity: {
-      guests: 8,
-      bedrooms: 4,
-      bathrooms: 4,
-      rooms: 7,
-      areaM2: 240,
+      guests: 6,
+      bedrooms: 3,
+      bathrooms: 2,
+      rooms: 3,
+      areaM2: 140,
       beds: [
         { type: 'King', count: 2 },
         { type: 'Queen', count: 1 },
-        { type: 'Single', count: 2 },
       ],
     },
     checkIn: '16:00',
     checkOut: '10:00',
     // France: tourist rental registration number (loi Le Meur). Shown in the footer.
-    registrationNumber: '83101000123AB',
+    // Portugal: Numero do Registo Nacional de Alojamento Local (RNAL). Shown in the footer.
+    registrationNumber: '123456/AL',
   },
-
   contact: {
-    hostName: 'Claire et Marc',
-    email: 'bonjour@villa-calanque.example.com',
-    // Demo numbers from the range French regulator ARCEP keeps for fiction.
-    phone: '+33 6 39 98 00 00',
-    whatsapp: '33639980000',
-    hostLanguages: ['fr-FR', 'en-GB', 'it-IT'],
+    hostName: 'Sara Martins',
+    email: 'martinssara@hotmail.fr',
+    phone: '+351 930563318',
+    whatsapp: '930563318',
+    hostLanguages: ['fr-FR', 'en-GB', 'pt-PT'],
     responseTime: {
       en: 'Reply within 24 hours',
       pt: 'Responderemos dentro de 24 horas',
@@ -133,12 +131,12 @@ export const villa = defineVilla({
 
   seo: {
     title: {
-      en: 'Villa Calanque · Villa with pool in Ramatuelle, Gulf of Saint-Tropez',
-      pt: 'Villa Calanque · Villa com piscina em Ramatuelle, Golfo de Saint-Tropez',
+      en: 'Casas DoceMar · Three-bedroom apartment with sea views',
+      pt: 'Casas DoceMar · Apartamento T3 com vista mar',
     },
     description: {
-      en: 'Book direct a 4-bedroom villa with an infinity pool facing the sea in Ramatuelle, near Saint-Tropez. Sleeps 8, from €650 a night, no booking fees.',
-      pt: 'Alugue diretamente uma villa de 4 quartos com piscina infinita voltada para o mar em Ramatuelle, perto de Saint-Tropez. Acomoda 8 pessoas, a partir de €650 por noite, sem taxas de reserva.',
+      en: 'Book directly a three-bedroom apartment with sea views in Manta Rota, just 1 km from the beach, with balconies in every bedroom.',
+      pt: 'Alugue diretamente um apartamento de 3 quartos com vista mar em Manta Rota, a 1 km da praia, com varandas em cada quarto.',
     },
     shareImage: 'hero.png',
     // Google forbids marking up ratings copied from Airbnb or Booking.com: keep false unless
@@ -149,20 +147,20 @@ export const villa = defineVilla({
   hero: {
     image: 'hero.png',
     imageAlt: {
-      en: 'The infinity pool facing the turquoise sea',
-      pt: 'A piscina infinita voltada para o mar turquesa',
+      en: 'Sea views from the apartment',
+      pt: 'A vista mar a partir do apartamento',
     },
     eyebrow: {
-      en: 'Villa rental · Ramatuelle, Gulf of Saint-Tropez',
-      pt: 'Aluguer de villa · Ramatuelle, Golfo de Saint-Tropez',
+      en: 'Holiday apartment · Manta Rota, Algarve',
+      pt: 'Apartamento para férias · Manta Rota, Algarve',
     },
     title: {
-      en: 'A villa facing the sea,\nin *Ramatuelle*',
-      pt: 'Uma villa voltada para o mar,\nem *Ramatuelle*',
+      en: 'An apartment with sea views in Manta Rota',
+      pt: 'Um apartamento com vista mar, na Manta Rota',
     },
     highlight: {
-      en: 'infinity pool',
-      pt: 'piscina infinita',
+      en: 'Sea views',
+      pt: 'Vista mar',
     },
   },
 
@@ -172,23 +170,23 @@ export const villa = defineVilla({
   house: {
     navLabel: { en: 'The house', pt: 'A casa' },
     title: {
-      en: 'Pale stone, linen and *deep blue*',
-      pt: 'Pedra clara, linho e *azul escuro*',
+      en: 'Navy blue tones, light wood and the serenity of the sea.',
+      pt: 'Tons de azul-marinho, madeira clara e a serenidade do mar.',
     },
     intro: {
-      en: 'Set on the hills of Ramatuelle, among vineyards and umbrella pines, Villa Calanque looks out over the bay of Pampelonne. Wide glass doors open straight onto the terrace and the pool: here, life happens outdoors, from breakfast to the last glass, when the Camarat lighthouse starts to shine.',
-      pt: 'Situada nas colinas de Ramatuelle, entre vinhedos e pinheiros, a Villa Calanque tem vista para a baía de Pampelonne. As amplas portas de vidro abrem diretamente para o terraço e a piscina: aqui, a vida acontece ao ar livre, desde o pequeno-almoço até ao último copo, quando o farol de Camarat começa a brilhar.',
+      en: 'Located in Manta Rota, this three-bedroom apartment offers lovely sea views, just 1 km from the beach. Every bedroom features its own balcony, creating the perfect spaces to enjoy the sea breeze and the tranquillity of the area.',
+      pt: 'Situado na Manta Rota, este apartamento T3 oferece uma agradável vista sobre o mar, a apenas 1 km da praia. Todos os quartos dispõem de varanda, criando espaços perfeitos para aproveitar a brisa do mar e a tranquilidade da região.',
     },
     images: ['living.jpg', 'terrace.jpg'],
     highlights: [
       {
         title: { 
-          en: 'The infinity pool',
-          pt: 'A piscina infinita'
+          en: 'The sea views',
+          pt: 'A vista mar'
         },
         text: {
-          en: 'Twelve metres of water, heated from May to October, that seem to spill into the sea. Sun loungers, parasols and an outdoor shower.',
-          pt: 'Doze metros de água, aquecida de maio a outubro, que parece derramar para o mar. Tábuas de sol, guarda-sóis e uma ducha ao ar livre.',
+          en: 'From the upper bedroom balcony, an incredible view over the sea. A tranquillity that stretches to the horizon.',
+          pt: 'Da varanda do quarto superior uma incrivel vista sobre o mar. Uma tranquilidade que se prolonga até ao horizonte.',
         },
       },
       {
@@ -197,18 +195,18 @@ export const villa = defineVilla({
           pt: 'O terraço e a cozinha de verão'
         },
         text: {
-          en: 'A table for ten under the pergola, a barbecue, a plancha and a summer kitchen for long dinners outdoors.',
-          pt: 'Uma mesa para dez pessoas sob o pergolado, um churrasqueira, uma plancha e uma cozinha de verão para jantares longos ao ar livre.',
+          en: 'A table for ten under the pergola, a barbecue and a summer kitchen for long dinners outdoors.',
+          pt: 'Uma mesa para dez pessoas sob o pergolado, um churrasqueira e uma cozinha de verão para jantares longos ao ar livre.',
         },
       },
       {
         title: { 
-          en: 'Four quiet suites',
-          pt: 'Quatro suítes tranquilas'
+          en: 'Three quiet badrooms',
+          pt: 'Três quartos tranquilos'
         },
         text: {
-          en: 'Every bedroom has its own shower room, air conditioning and washed-linen bedding. Two of them open straight onto the garden.',
-          pt: 'Cada quarto tem seu próprio banheiro, ar condicionado e roupas de cama lavadas. Dois deles abrem diretamente para o jardim.',
+          en: 'Every bedroom is amazing. With air conditioning and freshly laundered bed linen.',
+          pt: 'Todos os quartos são incríveis. Com ar condicionado e roupa de cama recém-lavada.',
         },
       },
       {
@@ -217,8 +215,8 @@ export const villa = defineVilla({
           pt: 'Praias a cinco minutos de distância'
         },
         text: {
-          en: 'Pampelonne, L’Escalet and the coastal path are a few minutes’ drive away, and so is the village of Ramatuelle.',
-          pt: 'Pampelonne, L’Escalet e o caminho costeiro estão a alguns minutos de distância de carro, assim como a aldeia de Ramatuelle.'
+          en: 'Manta Rota beach and the charms of the Algarve are just a short distance away, offering everything you need to enjoy a seaside getaway.',
+          pt: 'A praia da Manta Rota e os encantos da região do Algarve ficam a poucos minutos de distância, com tudo o que precisa para desfrutar de umas férias junto ao mar.'
         },
       },
     ],
@@ -232,11 +230,7 @@ export const villa = defineVilla({
         label: { en: 'of garden', pt: 'de jardim' },
       },
       {
-        value: { en: '12 × 5 m', pt: '12 × 5 m' },
-        label: { en: 'heated pool', pt: 'piscina aquecida' },
-      },
-      {
-        value: { en: '2 km', pt: '2 km' },
+        value: { en: '1 km', pt: '1 km' },
         label: { en: 'to the beach', pt: 'à praia' },
       },
     ],
@@ -671,7 +665,7 @@ export const villa = defineVilla({
           en: 'November to April, holidays excluded',
           pt: 'Novembro a Abril, feriados excluídos'
         },
-        nightly: 650,
+        nightly: 200,
         minNights: 3,
         ranges: [
           ['11-01', '12-19'],

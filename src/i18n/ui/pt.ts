@@ -138,7 +138,7 @@ export const pt: UiStrings = {
     registration: 'N.º de registo',
     languages: 'Idiomas',
     rights: (y, name) => `© ${y} ${name}`,
-    madeWith: 'Tema por Riviera Themes',
+    madeWith: '', // 'Tema por Riviera Themes',
   },
   notFound: {
     title: 'Página não encontrada',
