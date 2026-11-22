@@ -356,6 +356,7 @@ export const villaSchema = z.object({
   hero: z.object({
     image: photo,
     imageAlt: localizedSchema,
+    mobileImage: photo.optional(),
     /** Small line above the title. */
     eyebrow: localizedSchema,
     /** Big title. Wrap a word in *stars* to set it in italics; a line break starts a new line. */

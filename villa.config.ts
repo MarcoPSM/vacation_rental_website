@@ -146,6 +146,7 @@ export const villa = defineVilla({
 
   hero: {
     image: 'hero.png',
+    mobileImage: 'hero_mobile.png',
     imageAlt: {
       en: 'Sea views from the duplex',
       pt: 'A vista mar a partir do duplex',
@@ -335,11 +336,11 @@ export const villa = defineVilla({
       },
     },
     {
-      image: 'air_conditioning_control.jpeg',
+      image: 'pergola.jpg',
       category: 'common',
       alt: {
-        en: 'Air conditioning in every room for your comfort in every season',
-        pt: 'Ar condicionado em todas as divisões para seu conforto em qualquer estação',
+        en: 'Pergola for relaxing, barbecuing and sharing good moments',
+        pt: 'Pérgola para relaxar, fazer churrascos e partilhar bons momentos',
       },
     },
     {
@@ -358,6 +359,14 @@ export const villa = defineVilla({
         pt: 'Nascer do sol sobre os telhados (vista do quarto superior)',
       },
     },
+    // {
+    //   image: 'air_conditioning_control.jpeg',
+    //   category: 'common',
+    //   alt: {
+    //     en: 'Air conditioning in every room for your comfort in every season',
+    //     pt: 'Ar condicionado em todas as divisões para seu conforto em qualquer estação',
+    //   },
+    // },
   ],
 
   bedrooms: {

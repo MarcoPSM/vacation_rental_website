@@ -9,7 +9,7 @@ export const pt: UiStrings = {
     rates: 'Preços',
     reviews: 'Avaliações',
     availability: 'Disponibilidade',
-    book: 'Reservar diretamente',
+    book: 'Brevemente...', // 'Reservar diretamente',
     bookShort: 'Reservar',
     menu: 'Menu',
     close: 'Fechar',
@@ -23,7 +23,7 @@ export const pt: UiStrings = {
     departure: 'Check-out',
     guests: 'Hóspedes',
     addDate: 'Adicionar uma data',
-    search: 'Ver disponibilidade',
+    search: 'Brevemente...', // 'Ver disponibilidade',
   },
   trust: {
     reviewsOn: (count, source) => `${count} avaliações em ${source}`,

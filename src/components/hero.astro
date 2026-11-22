@@ -20,12 +20,21 @@ const { hero } = villa;
 <section class="hero relative px-3 pt-3 sm:px-[22px] sm:pt-[22px]" aria-labelledby="hero-title">
   <div class="hero-photo relative overflow-hidden rounded-[18px] sm:rounded-[22px]">
     <Image
+      src={photo(hero.mobileImage ?? hero.image)}
+      alt={t(hero.imageAlt)}
+      widths={[640, 960, 1280]}
+      sizes="100vw"
+      priority
+      class="absolute inset-0 h-full w-full object-cover min-[768px]:hidden"
+    />
+
+    <Image
       src={photo(hero.image)}
       alt={t(hero.imageAlt)}
       widths={[640, 960, 1280, 1600, 2000, 2400]}
       sizes="calc(100vw - 44px)"
       priority
-      class="absolute inset-0 h-full w-full object-cover"
+      class="absolute inset-0 hidden h-full w-full object-cover min-[768px]:block"
       style="object-position: center 30%;"
     />
     <div class="hero-shade absolute inset-0" aria-hidden="true"></div>
