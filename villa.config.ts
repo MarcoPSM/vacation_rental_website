@@ -177,7 +177,7 @@ export const villa = defineVilla({
       en: 'Located in Manta Rota, this two-bedroom apartment offers lovely sea views, just 1 km from the beach. Every bedroom features its own balcony, creating the perfect spaces to enjoy the sea breeze and the tranquillity of the area.',
       pt: 'Situado na Manta Rota, este apartamento T2 oferece uma agradável vista sobre o mar, a apenas 1 km da praia. Todos os quartos dispõem de varanda, criando espaços perfeitos para aproveitar a brisa do mar e a tranquilidade da região.',
     },
-    images: ['living.jpg', 'terrace.jpg'],
+    images: ['downstairs_bedroom_lamp.jpeg', 'outer_space_fuse.jpeg'],
     highlights: [
       {
         title: { 
@@ -239,99 +239,123 @@ export const villa = defineVilla({
   // Google asks for at least 8 photos, including a bedroom, a bathroom and a common area.
   gallery: [
     {
-      image: 'hero.png',
-      category: 'pool',
-      alt: {
-        en: 'The infinity pool facing the turquoise sea',
-        pt: 'A piscina infinita voltada para o mar turquesa'
-      },
-    },
-    {
-      image: 'living.jpg',
+      image: 'living_room.jpeg',
       category: 'common',
       alt: {
-        en: 'The light-filled living room with wide windows onto the sea',
-        pt: 'A sala de estar iluminada com grandes janelas que dão para o mar'
+        en: 'Bright living room with a blue sofa and a view through the balcony doors',
+        pt: 'Sala de estar luminosa com sofá azul e vista através das portas da varanda',
       },
     },
     {
-      image: 'terrace.jpg',
-      category: 'outdoor',
+      image: 'furniture1.jpeg',
+      category: 'common',
       alt: {
-        en: 'The long table in the shade of the vine-covered pergola',
-        pt: 'A longa mesa na sombra do pergolado coberto de videiras'
+        en: 'Distressed white, blue and turquoise chest of drawers',
+        pt: 'Cómoda em tons de branco, azul e turquesa com acabamento envelhecido',
       },
     },
     {
-      image: 'kitchen.jpg',
+      image: 'tableware.jpeg',
       category: 'kitchen',
       alt: {
-        en: 'The open kitchen and its light-wood dining table',
-        pt: 'A cozinha aberta e sua mesa de jantar de madeira clara'
+        en: 'Blue-patterned plates, bowls and a wine glass arranged on the table',
+        pt: 'Pratos, tigelas e taça com padrões azuis dispostos sobre a mesa',
       },
     },
     {
-      image: 'bedroom-1.jpg',
+      image: 'kitchen.jpeg',
+      category: 'kitchen',
+      alt: {
+        en: 'Modern kitchen with white cabinets, dark worktops and built-in appliances',
+        pt: 'Cozinha moderna com móveis brancos, bancadas escuras e eletrodomésticos embutidos',
+      },
+    },
+    {
+      image: 'downstairs_bedroom.jpeg',
       category: 'bedroom',
       alt: {
-        en: 'The master suite in sand tones and white bedding',
-        pt: 'A suíte principal em tons de areia e roupas de cama brancas'
+        en: 'Double bedroom with blue bedding and a surfboard picture above the bed',
+        pt: 'Quarto de casal com roupa de cama azul e uma imagem de pranchas de surf acima da cama',
       },
     },
     {
-      image: 'pool.jpg',
-      category: 'pool',
+      image: 'balcony_chairs.jpeg',
+      category: 'outdoor',
       alt: {
-        en: 'The infinity pool, its wooden deck and the pines facing the open sea',
-        pt: 'A piscina infinita, seu deque de madeira e os pinheiros voltados para o mar aberto'
+        en: 'Two red wire chairs and a blue side table on the balcony',
+        pt: 'Duas cadeiras vermelhas de linhas curvas e uma mesa lateral azul na varanda',
       },
     },
     {
-      image: 'bedroom-2.jpg',
+      image: 'bedroom_balcony1.jpeg',
       category: 'bedroom',
       alt: {
-        en: 'A bright bedroom with a wooden bed and a cane headboard',
-        pt: 'Um quarto iluminado com uma cama de madeira e uma cabeceira de vime'
+        en: 'Bedroom with a double bed and balcony doors opening onto the terrace',
+        pt: 'Quarto com cama de casal e portas de varanda abertas para o terraço',
       },
     },
     {
-      image: 'bathroom.jpg',
+      image: 'downstairs_bathroom2.jpeg',
       category: 'bathroom',
       alt: {
-        en: 'The bathroom with a vintage clawfoot tub and arched French doors',
-        pt: 'O banheiro com uma banheira de poleiro vintage e portas francesas arqueadas'
+        en: 'Bathroom with a bathtub, basin and beige tiled walls',
+        pt: 'Casa de banho com banheira, lavatório e paredes revestidas a azulejos beges',
       },
     },
     {
-      image: 'garden.jpg',
-      category: 'outdoor',
+      image: 'downstairs_bathroom1.jpeg',
+      category: 'bathroom',
       alt: {
-        en: 'The estate’s olive trees facing the sea',
-        pt: 'As oliveiras da propriedade voltadas para o mar'
+        en: 'Bathroom with a mirror, basin, toilet and bathtub',
+        pt: 'Casa de banho com espelho, lavatório, sanita e banheira',
       },
     },
     {
-      image: 'bedroom-3.jpg',
+      image: 'upstairs_room.jpeg',
       category: 'bedroom',
       alt: {
-        en: 'White sheets in the morning light',
-        pt: 'Lençóis brancos à luz da manhã'
+        en: 'Bedroom with a large bed, bedside tables and light curtains',
+        pt: 'Quarto com cama ampla, mesas de cabeceira e cortinas claras',
       },
     },
     {
-      image: 'exterior.jpg',
-      category: 'outdoor',
+      image: 'upstairs_room_sofabed.jpeg',
+      category: 'bedroom',
       alt: {
-        en: 'The villa’s white volumes and its pool on the lawn',
-        pt: 'Os volumes brancos da villa e sua piscina no gramado'
+        en: 'Upper-floor bedroom with a double bed and a sofa (safabed) beside the window',
+        pt: 'Quarto do piso superior com cama de casal e sofá (sofa-cama) junto à janela',
       },
     },
     {
-      image: 'detail.jpg',
+      image: 'upstairs_bathroom.jpeg',
+      category: 'bathroom',
+      alt: {
+        en: 'Modern bathroom with a walk-in shower, toilet and white basin',
+        pt: 'Casa de banho moderna com polibán, sanita e lavatório branco',
+      },
+    },
+    {
+      image: 'air_conditioning_control.jpeg',
+      category: 'common',
+      alt: {
+        en: 'Air conditioning remote control resting on a wooden bedside table',
+        pt: 'Comando do ar condicionado pousado sobre uma mesa de cabeceira de madeira',
+      },
+    },
+    {
+      image: 'outer_space.jpeg',
       category: 'outdoor',
       alt: {
-        en: 'A white amphora on the terrace, facing the sea',
-        pt: 'Uma ânfora branca no terraço, voltada para o mar'
+        en: 'Bright outdoor terrace with a shaded lounge and an ornamental buddha',
+        pt: 'Terraço exterior luminoso com zona de estar sombreada e uma escultura ornamental de buda',
+      },
+    },
+    {
+      image: 'sunset_view.jpeg',
+      category: 'surroundings',
+      alt: {
+        en: 'Sunrise over terracotta roofs and surrounding houses',
+        pt: 'Nascer do sol sobre telhados de telha laranja e casas da envolvente',
       },
     },
   ],
@@ -931,10 +955,10 @@ export const villa = defineVilla({
   // These pages are templates, not legal advice: have them checked for your country.
   legal: {
     // noticeUrl: 'https://your-company.example/legal-notice',
-    publisherName: '', // owner or company publishing the site
-    publisherAddress: '',
+    publisherName: 'Doce Mar Holiday Homes', // owner or company publishing the site
+    publisherAddress: 'Manta Rota, Vila Nova de Cacela, Portugal',
     companyId: '', // company number (SIRET, VAT...), empty if none
-    publicationDirector: '',
+    publicationDirector: 'Sara Martins',
     hostingProvider: {
       name: 'Cloudflare, Inc.',
       address: '101 Townsend St, San Francisco, CA 94107, USA',
