@@ -58,11 +58,11 @@ export const villa = defineVilla({
 
   theme: {
     colors: {
-      background: '#F1EDE6', // page background (cream)
-      surface: '#FFFFFF', // cards, menu, booking bar
-      text: '#1E1B18',
-      accent: '#B85C38', // buttons and links (terracotta)
-      heroAccent: '#F3C7A8', // italic word of the big title
+      background: '#F9F9F9', // light blue-grey page background
+      surface: '#FFFFFF', // cards, menu and booking bar
+      text: '#17324D', // deep navy text
+      accent: '#277DA1', // restrained ocean blue for buttons and links
+      heroAccent: '#B9DCE8', // soft blue highlight in the hero title
     },
     fonts: {
       // Font files are loaded in src/styles/fonts.css (self-hosted, no Google Fonts request).
