@@ -147,16 +147,16 @@ export const villa = defineVilla({
   hero: {
     image: 'hero.png',
     imageAlt: {
-      en: 'Sea views from the apartment',
-      pt: 'A vista mar a partir do apartamento',
+      en: 'Sea views from the duplex',
+      pt: 'A vista mar a partir do duplex',
     },
     eyebrow: {
       en: 'Manta Rota, Algarve',
       pt: 'Manta Rota, Algarve',
     },
     title: {
-      en: 'An apartment with sea views',
-      pt: 'Um apartamento com vista mar',
+      en: 'A duplex with sea views',
+      pt: 'Um duplex com vista mar',
     },
     highlight: {
       en: 'Sea views',
@@ -195,8 +195,8 @@ export const villa = defineVilla({
           pt: 'O terraço e a cozinha de verão'
         },
         text: {
-          en: 'A table for ten under the pergola, a barbecue and a summer kitchen for long dinners outdoors.',
-          pt: 'Uma mesa para dez pessoas sob o pergolado, um churrasqueira e uma cozinha de verão para jantares longos ao ar livre.',
+          en: 'A table for ten under the pergola, a barbecue for long dinners outdoors.',
+          pt: 'Uma mesa para dez pessoas sob o pérgola e uma churrasqueira para jantares longos ao ar livre.',
         },
       },
       {
@@ -242,120 +242,120 @@ export const villa = defineVilla({
       image: 'living_room.jpeg',
       category: 'common',
       alt: {
-        en: 'Bright living room with a blue sofa and a view through the balcony doors',
-        pt: 'Sala de estar luminosa com sofá azul e vista através das portas da varanda',
+        en: 'Bright living room with characteristic Doce Mar decor and a Smart TV',
+        pt: 'Sala de estar luminosa com decoração típica Doce Mar e Smart TV',
       },
     },
     {
       image: 'furniture1.jpeg',
       category: 'common',
       alt: {
-        en: 'Distressed white, blue and turquoise chest of drawers',
-        pt: 'Cómoda em tons de branco, azul e turquesa com acabamento envelhecido',
+        en: 'Details that make us unique',
+        pt: 'Pormenores que nos tornam únicos',
       },
     },
     {
       image: 'tableware.jpeg',
       category: 'kitchen',
       alt: {
-        en: 'Blue-patterned plates, bowls and a wine glass arranged on the table',
-        pt: 'Pratos, tigelas e taça com padrões azuis dispostos sobre a mesa',
+        en: 'Complete kitchenware for everyone',
+        pt: 'Serviço de cozinha completo para todos',
       },
     },
     {
       image: 'kitchen.jpeg',
       category: 'kitchen',
       alt: {
-        en: 'Modern kitchen with white cabinets, dark worktops and built-in appliances',
-        pt: 'Cozinha moderna com móveis brancos, bancadas escuras e eletrodomésticos embutidos',
+        en: 'Modern kitchen with everything you need for a relaxing holiday',
+        pt: 'Cozinha moderna com tudo o que necessita para umas férias relaxadas',
       },
     },
     {
       image: 'downstairs_bedroom.jpeg',
       category: 'bedroom',
       alt: {
-        en: 'Double bedroom with blue bedding and a surfboard picture above the bed',
-        pt: 'Quarto de casal com roupa de cama azul e uma imagem de pranchas de surf acima da cama',
+        en: 'Welcoming double bedroom where rest is felt',
+        pt: 'Quarto de casal acolhedor onde o descanso se sente',
       },
     },
     {
       image: 'balcony_chairs.jpeg',
       category: 'outdoor',
       alt: {
-        en: 'Two red wire chairs and a blue side table on the balcony',
-        pt: 'Duas cadeiras vermelhas de linhas curvas e uma mesa lateral azul na varanda',
+        en: 'One of the balconies for relaxing in the Algarve breeze',
+        pt: 'Uma das varandas para relaxar com a brisa do Algarve',
       },
     },
     {
       image: 'bedroom_balcony1.jpeg',
       category: 'bedroom',
       alt: {
-        en: 'Bedroom with a double bed and balcony doors opening onto the terrace',
-        pt: 'Quarto com cama de casal e portas de varanda abertas para o terraço',
+        en: 'Our colours, our place',
+        pt: 'Os nossos tons, o nosso lugar',
       },
     },
     {
       image: 'downstairs_bathroom2.jpeg',
       category: 'bathroom',
       alt: {
-        en: 'Bathroom with a bathtub, basin and beige tiled walls',
-        pt: 'Casa de banho com banheira, lavatório e paredes revestidas a azulejos beges',
+        en: 'Bathroom with a bathtub where you can relax with sea salts',
+        pt: 'Casa de banho com banheira onde pode relaxar com sais do mar',
       },
     },
     {
       image: 'downstairs_bathroom1.jpeg',
       category: 'bathroom',
       alt: {
-        en: 'Bathroom with a mirror, basin, toilet and bathtub',
-        pt: 'Casa de banho com espelho, lavatório, sanita e banheira',
+        en: 'Simple, yet functional',
+        pt: 'Simples, mas funcional',
       },
     },
     {
       image: 'upstairs_room.jpeg',
       category: 'bedroom',
       alt: {
-        en: 'Bedroom with a large bed, bedside tables and light curtains',
-        pt: 'Quarto com cama ampla, mesas de cabeceira e cortinas claras',
+        en: 'Double bedroom with a sofa bed and desk',
+        pt: 'Quarto de casal com sofá-cama e secretária',
       },
     },
     {
       image: 'upstairs_room_sofabed.jpeg',
       category: 'bedroom',
       alt: {
-        en: 'Upper-floor bedroom with a double bed and a sofa (safabed) beside the window',
-        pt: 'Quarto do piso superior com cama de casal e sofá (sofa-cama) junto à janela',
+        en: 'Every detail designed for your comfort',
+        pt: 'Cada detalhe pensado para o seu conforto',
       },
     },
     {
       image: 'upstairs_bathroom.jpeg',
       category: 'bathroom',
       alt: {
-        en: 'Modern bathroom with a walk-in shower, toilet and white basin',
-        pt: 'Casa de banho moderna com polibán, sanita e lavatório branco',
+        en: 'Small details that make the difference',
+        pt: 'Pequenos detalhes que fazem a diferença',
       },
     },
     {
       image: 'air_conditioning_control.jpeg',
       category: 'common',
       alt: {
-        en: 'Air conditioning remote control resting on a wooden bedside table',
-        pt: 'Comando do ar condicionado pousado sobre uma mesa de cabeceira de madeira',
+        en: 'Air conditioning in every room for your comfort in every season',
+        pt: 'Ar condicionado em todas as divisões para seu conforto em qualquer estação',
       },
     },
     {
       image: 'outer_space.jpeg',
       category: 'outdoor',
       alt: {
-        en: 'Bright outdoor terrace with a shaded lounge and an ornamental buddha',
-        pt: 'Terraço exterior luminoso com zona de estar sombreada e uma escultura ornamental de buda',
+        en: 'Two terraces to enjoy our climate',
+        pt: 'Dois terraços para desfrutar do nosso clima',
       },
     },
     {
       image: 'sunset_view.jpeg',
       category: 'surroundings',
       alt: {
-        en: 'Sunrise over terracotta roofs and surrounding houses',
-        pt: 'Nascer do sol sobre telhados de telha laranja e casas da envolvente',
+        en: 'Sunrise over the rooftops, viewed from the upper bedroom',
+        pt: 'Nascer do sol sobre os telhados (vista do quarto superior)',
       },
     },
   ],

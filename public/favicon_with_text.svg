@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Doce Mar Holiday Homes">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2A627" />
+      <stop offset="100%" stop-color="#C4870E" />
+    </linearGradient>
+    <linearGradient id="blueDark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#073B66" />
+      <stop offset="100%" stop-color="#0C548E" />
+    </linearGradient>
+    <linearGradient id="blueLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0A7BC2" />
+      <stop offset="100%" stop-color="#1596E0" />
+    </linearGradient>
+  </defs>
+
+  
+  <rect x="2.5" y="2.5" width="59" height="59" rx="13" ry="13" fill="#FFFFFF" stroke="url(#goldGrad)" stroke-width="2.6" />
+
+  
+  <g fill="url(#blueDark)">
+    
+    <path d="M35 12.5 Q38.5 11.5 42 12.5 L42 34 L35 34 Z" />
+    
+    <rect x="36.6" y="15.5" width="1.3" height="10" fill="#FFFFFF" />
+    <rect x="39.3" y="15.5" width="1.3" height="10" fill="#FFFFFF" />
+
+    
+    <path d="M31 16.5 L34.2 14.5 L34.2 34 L31 34 Z" />
+
+    
+    <rect x="43" y="18.5" width="9" height="16.5" rx="0.6" />
+    
+    <rect x="44.5" y="20.2" width="2.2" height="2.4" fill="#FFFFFF" />
+    <rect x="47.8" y="20.2" width="2.2" height="2.4" fill="#FFFFFF" />
+    <rect x="44.5" y="23.8" width="2.2" height="2.4" fill="#FFFFFF" />
+    <rect x="47.8" y="23.8" width="2.2" height="2.4" fill="#FFFFFF" />
+    <rect x="47.8" y="27.4" width="2.2" height="2.4" fill="#FFFFFF" />
+  </g>
+
+  
+  <g>
+    
+    <path d="M15.5 29.5 L22.2 24.5 L28.9 29.5 L27.6 30.8 L22.2 26.8 L16.8 30.8 Z" fill="url(#goldGrad)" />
+    <rect x="17.5" y="29.8" width="1.7" height="7.4" fill="url(#goldGrad)" />
+    <rect x="25.2" y="29.8" width="1.7" height="7.4" fill="url(#goldGrad)" />
+    
+    <rect x="20.3" y="30.5" width="1.6" height="1.6" fill="url(#goldGrad)" />
+    <rect x="22.4" y="30.5" width="1.6" height="1.6" fill="url(#goldGrad)" />
+    <rect x="20.3" y="32.6" width="1.6" height="1.6" fill="url(#goldGrad)" />
+    <rect x="22.4" y="32.6" width="1.6" height="1.6" fill="url(#goldGrad)" />
+
+    
+    <polygon points="24.2,25.2 29.5,25.2 26.8,23.4" fill="url(#goldGrad)" />
+
+    
+    <path d="M26.2 27.2 L35.2 20.2 L44.2 27.2 L42.5 28.8 L35.2 23.1 L27.9 28.8 Z" fill="url(#goldGrad)" />
+    <rect x="28.8" y="27.5" width="2.1" height="10.2" fill="url(#goldGrad)" />
+    <rect x="39.5" y="27.5" width="2.1" height="10.2" fill="url(#goldGrad)" />
+    
+    <rect x="32.3" y="28.5" width="2.3" height="2.3" fill="url(#goldGrad)" />
+    <rect x="35.3" y="28.5" width="2.3" height="2.3" fill="url(#goldGrad)" />
+    <rect x="32.3" y="31.5" width="2.3" height="2.3" fill="url(#goldGrad)" />
+    <rect x="35.3" y="31.5" width="2.3" height="2.3" fill="url(#goldGrad)" />
+  </g>
+
+  
+  <path d="M9.5 40.5 C17.5 36.2, 26.5 38.2, 35.5 37.2 C45.5 36.0, 52.2 29.8, 55.2 21.8 C54.5 31.8, 46.8 39.8, 35.2 41.2 C25.5 42.3, 16.5 38.5, 9.5 40.5 Z" fill="url(#blueDark)" />
+  <path d="M14.5 40.2 C22.5 39.2, 30.5 43.2, 39.8 41.8 C47.5 40.6, 52.8 35.2, 55.5 28.5 C53.8 37.5, 46.2 44.2, 36.5 44.8 C27.5 45.3, 20.5 41.8, 14.5 40.2 Z" fill="url(#blueLight)" />
+
+  
+  <text x="32" y="53.5" text-anchor="middle" font-family="Georgia, &#39;Times New Roman&#39;, serif" font-weight="700" font-size="8.6" letter-spacing="0.4" fill="#073B66">DOCE MAR</text>
+
+  
+  <text x="32" y="59.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="600" font-size="3.6" letter-spacing="1.25" fill="#154A75">HOLIDAY HOMES</text>
+</svg>
