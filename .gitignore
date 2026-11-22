@@ -1,24 +1,23 @@
 # build output
 dist/
-# generated types
+lite-build/
+release/
+dist-lite-demo/
 .astro/
 
 # dependencies
 node_modules/
 
-# logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-
-# environment variables
+# environment (real iCal links, keys)
 .env
-.env.production
+.env.*
+!.env.example
 
-# macOS-specific files
+# local Cloudflare files
+.wrangler/
+.dev.vars
+
+# editors and OS
 .DS_Store
-
-# jetbrains setting folder
-.idea/
+.vscode/*
+!.vscode/extensions.json

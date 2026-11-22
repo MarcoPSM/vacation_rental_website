@@ -1,0 +1,978 @@
+/**
+ * ─────────────────────────────────────────────────────────────────────────────
+ *  VILLA CONFIG: the only file you need to edit to make the site yours.
+ * ─────────────────────────────────────────────────────────────────────────────
+ *
+ *  - Every text visitors read is translated field by field: { fr, en, it, de }.
+ *    Keep one line per language. You only need the languages listed in
+ *    `languages.active`: the build tells you which translation is missing.
+ *  - Photos are file names from `src/assets/photos/` (e.g. 'pool.jpg').
+ *  - Wrap a word in *stars* in a title to set it in italics.
+ *  - The build checks this file and stops with a clear message if something
+ *    is wrong (`npm run build` or `npm run dev`).
+ *
+ *  The content below is the demo: Villa Calanque is a fictional villa.
+ *  Replace it with your property. Help: README.md and docs/help.md.
+ */
+import { defineVilla } from './src/config/define.ts';
+
+export const villa = defineVilla({
+  site: {
+    // Public address of the site, without trailing slash.
+    url: 'https://casasdocemar.pt/',
+    // Descomentar para que o texto apareca no site. O texto é mostrado no rodapé do site.
+/*     demoNotice: {
+      en: 'Demo site of the Riviera Themes theme. Villa Calanque is fictional: its address, prices, reviews and registration number are made up. Royalty-free photos.',
+      pt: 'Site de demonstração do tema Riviera Themes. A Villa Calanque é fictícia: o endereço, os preços, as avaliações e o número de registo são inventados. Fotografias livres de direitos.',
+    }, */
+  },
+
+  languages: {
+    // The language of the home page at "/".
+    default: 'pt',
+    active: ['pt', 'en'],
+   
+    // Flag of each language in the language menu. English shows the UK flag; for the US: { en: 'us' }.
+    flags: {},
+  },
+
+  features: {
+    calendar: false, // Pro edition only
+    structuredData: false, // Pro edition only
+  },
+
+  // Set any section to false to hide it, e.g. faq: false.
+  sections: {
+    house: true,
+    gallery: true,
+    bedrooms: false,
+    amenities: false,
+    area: false,
+    rates: false,
+    reviews: false,
+    availability: false,
+    booking: false,
+    faq: false,
+    rules: false,
+  },
+
+  theme: {
+    colors: {
+      background: '#F9F9F9', // light blue-grey page background
+      surface: '#FFFFFF', // cards, menu and booking bar
+      text: '#17324D', // deep navy text
+      accent: '#277DA1', // restrained ocean blue for buttons and links
+      heroAccent: '#B9DCE8', // soft blue highlight in the hero title
+    },
+    fonts: {
+      // Font files are loaded in src/styles/fonts.css (self-hosted, no Google Fonts request).
+      heading: "'Cormorant Garamond', 'Times New Roman', serif",
+      body: "'Inter', system-ui, sans-serif",
+    },
+  },
+
+  property: {
+    name: 'Doce Mar',
+    // Never change this id once the site is online (Google uses it to recognise the listing).
+    id: 'casasdocemar-carolinamar',
+    type: 'Apartment',
+    tagline: {
+      en: 'Three-bedroom apartment with sea views, 1 km from the beach',
+      pt: 'Apartamento a 1 km da praia',
+    },
+    address: {
+      street: 'Rua das Sete Casas',
+      postalCode: '8900-038',
+      locality: 'Manta Rota',
+      region: 'Vila Nova de Cacela',
+      country: 'PT',
+    },
+    // At least 5 decimals. Right-click the house in Google Maps or OpenStreetMap to copy them.
+    // If a value ends with 0, write it as a string so the 0 is kept: '43.22130'.
+    geo: { latitude: 37.166505, longitude: 7.522084 },
+    timeZone: 'Europe/Lisbon',
+    currency: 'EUR',
+    capacity: {
+      guests: 6,
+      bedrooms: 2,
+      bathrooms: 2,
+      rooms: 4,
+      areaM2: 140,
+      beds: [
+        { type: 'King', count: 2 },
+        // { type: 'Queen', count: 1 },
+      ],
+    },
+    checkIn: '16:00',
+    checkOut: '10:00',
+    // France: tourist rental registration number (loi Le Meur). Shown in the footer.
+    // Portugal: Numero do Registo Nacional de Alojamento Local (RNAL). Shown in the footer.
+    registrationNumber: 'Em processamento',
+  },
+  contact: {
+    hostName: 'Sara Martins',
+    email: 'info@casasdocemar.pt',
+    phone: '+351 930563318',
+    whatsapp: '930563318',
+    hostLanguages: ['fr-FR', 'en-GB', 'pt-PT'],
+    responseTime: {
+      en: 'Reply within 24 hours',
+      pt: 'Responderemos dentro de 24 horas',
+    },
+  },
+
+  booking: {
+    // 'web3forms' or 'formspree' to receive requests by email, 'none' for WhatsApp and email buttons only.
+    provider: 'web3forms',
+    // Web3Forms access key (free at web3forms.com) or Formspree form ID. Empty: WhatsApp and email buttons.
+    key: '',
+  },
+
+
+  seo: {
+    title: {
+      en: 'Casas DoceMar · Three-bedroom apartment with sea views',
+      pt: 'Casas DoceMar · Apartamento T3 com vista mar',
+    },
+    description: {
+      en: 'Book directly a three-bedroom apartment with sea views in Manta Rota, just 1 km from the beach, with balconies in every bedroom.',
+      pt: 'Alugue diretamente um apartamento de 2 quartos com vista mar em Manta Rota, a 1 km da praia, com varandas em cada quarto.',
+    },
+    shareImage: 'hero.png',
+    // Google forbids marking up ratings copied from Airbnb or Booking.com: keep false unless
+    // your reviews are collected on your own site (source: 'direct').
+    reviewsInStructuredData: false,
+  },
+
+  hero: {
+    image: 'hero.png',
+    mobileImage: 'hero_mobile.png',
+    imageAlt: {
+      en: 'Sea views from the duplex',
+      pt: 'A vista mar a partir do duplex',
+    },
+    eyebrow: {
+      en: 'Manta Rota, Algarve',
+      pt: 'Manta Rota, Algarve',
+    },
+    title: {
+      en: 'A duplex with sea views',
+      pt: 'Um duplex com vista mar',
+    },
+    highlight: {
+      en: 'Sea views',
+      pt: 'Vista mar',
+    },
+  },
+
+  // Shown under the booking bar. Remove the block if you have no reviews yet.
+  // rating: { value: 4.96, count: 38, source: 'Airbnb' },
+
+  house: {
+    navLabel: { en: 'The house', pt: 'A casa' },
+    title: {
+      en: 'Navy blue tones, light wood and the serenity of the sea.',
+      pt: 'Tons de azul-marinho, madeira clara e a serenidade do mar.',
+    },
+    intro: {
+      en: 'Located in Manta Rota, this two-bedroom apartment offers lovely sea views, just 1 km from the beach. Every bedroom features its own balcony, creating the perfect spaces to enjoy the sea breeze and the tranquillity of the area.',
+      pt: 'Situado na Manta Rota, este apartamento T2 oferece uma agradável vista sobre o mar, a apenas 1 km da praia. Todos os quartos dispõem de varanda, criando espaços perfeitos para aproveitar a brisa do mar e a tranquilidade da região.',
+    },
+    images: ['downstairs_bedroom_lamp.jpeg', 'outer_space_fuse.jpeg'],
+    highlights: [
+      {
+        title: { 
+          en: 'The sea views',
+          pt: 'A vista mar'
+        },
+        text: {
+          en: 'From the upper bedroom balcony, an incredible view over the sea. A tranquillity that stretches to the horizon.',
+          pt: 'Da varanda do quarto superior uma incrivel vista sobre o mar. Uma tranquilidade que se prolonga até ao horizonte.',
+        },
+      },
+      {
+        title: {
+          en: 'The terrace and summer kitchen',
+          pt: 'O terraço e a cozinha de verão'
+        },
+        text: {
+          en: 'A table for ten under the pergola, a barbecue for long dinners outdoors.',
+          pt: 'Uma mesa para dez pessoas sob o pérgola e uma churrasqueira para jantares longos ao ar livre.',
+        },
+      },
+      {
+        title: { 
+          en: 'Two quiet badrooms',
+          pt: 'Dois quartos tranquilos'
+        },
+        text: {
+          en: 'Every bedroom is amazing. With air conditioning and freshly laundered bed linen.',
+          pt: 'Todos os quartos são incríveis. Com ar condicionado e roupa de cama recém-lavada.',
+        },
+      },
+      {
+        title: {
+          en: 'Beaches five minutes away',
+          pt: 'Praias a cinco minutos de distância'
+        },
+        text: {
+          en: 'Manta Rota beach and the charms of the Algarve are just a short distance away, offering everything you need to enjoy a seaside getaway.',
+          pt: 'A praia da Manta Rota e os encantos da região do Algarve ficam a poucos minutos de distância, com tudo o que precisa para desfrutar de umas férias junto ao mar.'
+        },
+      },
+    ],
+    facts: [
+      // {
+      //   value: { en: '240 m²', pt: '240 m²' },
+      //   label: { en: 'of living space', pt: 'de espaço de convivência' },
+      // },
+      // {
+      //   value: { en: '3,000 m²', pt: '3.000 m²' },
+      //   label: { en: 'of garden', pt: 'de jardim' },
+      // },
+      {
+        value: { en: '1 km', pt: '1 km' },
+        label: { en: 'to the beach', pt: 'à praia' },
+      },
+    ],
+  },
+
+  // Google asks for at least 8 photos, including a bedroom, a bathroom and a common area.
+  gallery: [
+    {
+      image: 'living_room.jpeg',
+      category: 'common',
+      alt: {
+        en: 'Bright living room with characteristic Doce Mar decor and a Smart TV',
+        pt: 'Sala de estar luminosa com decoração típica Doce Mar e Smart TV',
+      },
+    },
+    {
+      image: 'furniture1.jpeg',
+      category: 'common',
+      alt: {
+        en: 'Details that make us unique',
+        pt: 'Pormenores que nos tornam únicos',
+      },
+    },
+    {
+      image: 'tableware.jpeg',
+      category: 'kitchen',
+      alt: {
+        en: 'Complete kitchenware for everyone',
+        pt: 'Serviço de cozinha completo para todos',
+      },
+    },
+    {
+      image: 'kitchen.jpeg',
+      category: 'kitchen',
+      alt: {
+        en: 'Modern kitchen with everything you need for a relaxing holiday',
+        pt: 'Cozinha moderna com tudo o que necessita para umas férias relaxadas',
+      },
+    },
+    {
+      image: 'downstairs_bedroom.jpeg',
+      category: 'bedroom',
+      alt: {
+        en: 'Welcoming double bedroom where rest is felt',
+        pt: 'Quarto de casal acolhedor onde o descanso se sente',
+      },
+    },
+    {
+      image: 'balcony_chairs.jpeg',
+      category: 'outdoor',
+      alt: {
+        en: 'One of the balconies for relaxing in the Algarve breeze',
+        pt: 'Uma das varandas para relaxar com a brisa do Algarve',
+      },
+    },
+    {
+      image: 'bedroom_balcony1.jpeg',
+      category: 'bedroom',
+      alt: {
+        en: 'Our colours, our place',
+        pt: 'Os nossos tons, o nosso lugar',
+      },
+    },
+    {
+      image: 'downstairs_bathroom2.jpeg',
+      category: 'bathroom',
+      alt: {
+        en: 'Bathroom with a bathtub where you can relax with sea salts',
+        pt: 'Casa de banho com banheira onde pode relaxar com sais do mar',
+      },
+    },
+    {
+      image: 'downstairs_bathroom1.jpeg',
+      category: 'bathroom',
+      alt: {
+        en: 'Simple, yet functional',
+        pt: 'Simples, mas funcional',
+      },
+    },
+    {
+      image: 'upstairs_room.jpeg',
+      category: 'bedroom',
+      alt: {
+        en: 'Double bedroom with a sofa bed and desk',
+        pt: 'Quarto de casal com sofá-cama e secretária',
+      },
+    },
+    {
+      image: 'upstairs_room_sofabed.jpeg',
+      category: 'bedroom',
+      alt: {
+        en: 'Every detail designed for your comfort',
+        pt: 'Cada detalhe pensado para o seu conforto',
+      },
+    },
+    {
+      image: 'upstairs_bathroom.jpeg',
+      category: 'bathroom',
+      alt: {
+        en: 'Small details that make the difference',
+        pt: 'Pequenos detalhes que fazem a diferença',
+      },
+    },
+    {
+      image: 'pergola.jpg',
+      category: 'common',
+      alt: {
+        en: 'Pergola for relaxing, barbecuing and sharing good moments',
+        pt: 'Pérgola para relaxar, fazer churrascos e partilhar bons momentos',
+      },
+    },
+    {
+      image: 'outer_space.jpeg',
+      category: 'outdoor',
+      alt: {
+        en: 'Two terraces to enjoy our climate',
+        pt: 'Dois terraços para desfrutar do nosso clima',
+      },
+    },
+    {
+      image: 'sunset_view.jpeg',
+      category: 'surroundings',
+      alt: {
+        en: 'Sunrise over the rooftops, viewed from the upper bedroom',
+        pt: 'Nascer do sol sobre os telhados (vista do quarto superior)',
+      },
+    },
+    // {
+    //   image: 'air_conditioning_control.jpeg',
+    //   category: 'common',
+    //   alt: {
+    //     en: 'Air conditioning in every room for your comfort in every season',
+    //     pt: 'Ar condicionado em todas as divisões para seu conforto em qualquer estação',
+    //   },
+    // },
+  ],
+
+  bedrooms: {
+    // Two photos shown next to the list of bedrooms.
+    images: [
+      {
+        image: 'bedroom-1.jpg',
+        alt: {
+          en: 'The master suite in sand tones and white bedding',
+          pt: 'A suíte principal em tons de areia e roupas de cama brancas'
+        },
+      },
+      {
+        image: 'bedroom-2.jpg',
+        alt: {
+          en: 'A bright bedroom with a wooden bed and a cane headboard',
+          pt: 'Um quarto iluminado com uma cama de madeira e uma cabeceira de vime'
+        },
+      },
+    ],
+    rooms: [
+      {
+        name: { 
+          en: 'Calanque suite',
+          pt: 'Suíte Calanque'
+        },
+        beds: {
+          en: 'King-size bed, 180 × 200 cm',
+          pt: 'Cama king-size, 180 × 200 cm'
+        },
+        details: {
+          en: 'En-suite with walk-in shower · sea view · direct access to the terrace',
+          pt: 'Suíte com chuveiro interno · vista para o mar · acesso direto ao terraço'
+        },
+      },
+      {
+        name: { 
+          en: 'Pine room',
+          pt: 'Quarto de Pinheiro'
+        },
+        beds: {
+          en: 'Queen-size bed, 160 × 200 cm',
+          pt: 'Cama queen-size, 160 × 200 cm'
+        },
+        details: {
+          en: 'Private shower room · opens onto the garden',
+          pt: 'Chuveiro privado · dá para o jardim'
+        },
+      },
+      {
+        name: { 
+          en: 'Camarat room',
+          pt: 'Quarto Camarat'
+        },
+        beds: {
+          en: 'King-size bed, 180 × 200 cm',
+          pt: 'Cama king-size, 180 × 200 cm'
+        },
+        details: {
+          en: 'Private shower room · balcony over the vineyards',
+          pt: 'Chuveiro privado · varanda sobre as vinhas'
+        },
+      },
+      {
+        name: { 
+          en: 'Vineyard room',
+          pt: 'Quarto da Vinha'
+        },
+        beds: {
+          en: 'Two single beds, 90 × 200 cm',
+          pt: 'Duas camas individuais, 90 × 200 cm'
+        },
+        details: {
+          en: 'Private shower room · ideal for children',
+          pt: 'Chuveiro privado · ideal para crianças'
+        },
+      },
+    ],
+  },
+
+  // `google` links an amenity to the name Google understands (optional).
+  amenities: [
+    {
+      group: { 
+        en: 'Outdoors',
+        pt: 'Ao Ar Livre'
+      },
+      items: [
+        {
+          icon: 'pool',
+          google: 'pool',
+          label: {
+            en: 'Heated infinity pool',
+            pt: 'Piscina infinita aquecida'
+          },
+        },
+        {
+          icon: 'sun',
+          google: 'patio',
+          label: {
+            en: 'Terrace with pergola',
+            pt: 'Terraço com pergola'
+          },
+        },
+        {
+          icon: 'grill',
+          google: 'outdoorGrill',
+          label: {
+            en: 'Summer kitchen, barbecue and plancha',
+            pt: 'Cozinha de verão, churrasqueira e plancha'
+          },
+        },
+        {
+          icon: 'leaf',
+          label: {
+            en: 'Olive and lavender garden',
+            pt: 'Jardim de azevins e lavandas'
+          },
+        },
+        {
+          icon: 'parking',
+          label: {
+            en: 'Private parking for 3 cars',
+            pt: 'Estacionamento privado para 3 carros'
+          },
+        },
+      ],
+    },
+    {
+      group: { 
+        en: 'Indoors',
+        pt: 'Interior'
+      },
+      items: [
+        {
+          icon: 'kitchen',
+          google: 'kitchen',
+          label: {
+            en: 'Fitted kitchen, oven and dishwasher',
+            pt: 'Cozinha integrada, forno e lava-louças'
+          },
+        },
+        {
+          icon: 'ac',
+          google: 'ac',
+          label: {
+            en: 'Air conditioning in every room',
+            pt: 'Ar condicionado em todos os quartos'
+          },
+        },
+        {
+          icon: 'wifi',
+          google: 'wifi',
+          label: {
+            en: 'Fibre wifi',
+            pt: 'Wifi de fibra'
+          },
+        },
+        {
+          icon: 'tv',
+          google: 'tv',
+          label: {
+            en: 'Smart TV',
+            pt: 'Smart TV'
+          },
+        },
+        {
+          icon: 'washer',
+          google: 'washerDryer',
+          label: {
+            en: 'Washing machine and dryer',
+            pt: 'Máquina de lavar e secadora'
+          },
+        },
+      ],
+    },
+    {
+      group: { 
+        en: 'Comfort',
+        pt: 'Conforto'
+      },
+      items: [
+        {
+          icon: 'bed',
+          label: {
+            en: 'Bed linen and towels provided',
+            pt: 'Lençóis e toalhas fornecidas'
+          },
+        },
+        {
+          icon: 'sun',
+          label: {
+            en: 'Beach and pool towels',
+            pt: 'Toalhas de praia e piscina'
+          },
+        },
+        {
+          icon: 'baby',
+          google: 'crib',
+          label: {
+            en: 'Baby cot and high chair',
+            pt: 'Berço e cadeira alta'
+          },
+        },
+        {
+          icon: 'coffee',
+          label: {
+            en: 'Espresso machine',
+            pt: 'Máquina de café expresso'
+          },
+        },
+      ],
+    },
+    {
+      group: { 
+        en: 'Services',
+        pt: 'Serviços'
+      },
+      items: [
+        {
+          icon: 'key',
+          label: {
+            en: 'Personal welcome on arrival',
+            pt: 'Recepção pessoal na chegada'
+          },
+        },
+        {
+          icon: 'shield',
+          label: {
+            en: 'Mid-stay cleaning on request',
+            pt: 'Limpeza durante a estadia mediante solicitação'
+          },
+        },
+        {
+          icon: 'wine',
+          label: {
+            en: 'Private chef on request',
+            pt: 'Chef privado mediante solicitação'
+          },
+        },
+        {
+          icon: 'sea',
+          label: {
+            en: 'Boat hire arranged for you',
+            pt: 'Aluguel de barco organizado para você'
+          },
+        },
+      ],
+    },
+  ],
+
+  area: {
+    navLabel: { 
+      en: 'The Gulf',
+      pt: 'O Golfo'
+    },
+    title: {
+      en: 'The Gulf of *Saint-Tropez*, the quiet side',
+      pt: 'O Golfo de *Saint-Tropez*, o lado tranquilo'
+    },
+    intro: {
+      en: 'Ramatuelle keeps its flowered lanes and vineyards, away from the bustle of Saint-Tropez. The market in the morning, the sand of Pampelonne in the afternoon, the squares of Gassin at night: everything is less than twenty minutes away.',
+      pt: 'Ramatuelle mantém suas ruas floreadas e vinícolas, longe da agitação de Saint-Tropez. O mercado pela manhã, a areia de Pampelonne à tarde, as praças de Gassin à noite: tudo está a menos de vinte minutos de distância.'
+    },
+    images: [
+      {
+        image: 'beach.jpg',
+        alt: {
+          en: 'White sand beach and turquoise water near Saint-Tropez',
+          pt: 'Praia de areia branca e água turquesa perto de Saint-Tropez'
+        },
+      },
+      {
+        image: 'village.jpg',
+        alt: {
+          en: 'Saint-Tropez, its bell tower and the gulf seen from the hill',
+          pt: 'Saint-Tropez, sua torre de sino e o golfo vistos da colina'
+        },
+      },
+    ],
+    places: [
+      {
+        name: 'Plage de Pampelonne',
+        kind: { en: 'Sandy beach', pt: 'Praia de areia' },
+        distance: { en: '2 km · 5 min', pt: '2 km · 5 min' },
+      },
+      {
+        name: 'Ramatuelle',
+        kind: { en: 'Hilltop village', pt: 'Vila na encosta' },
+        distance: { en: '2.5 km · 6 min', pt: '2.5 km · 6 min' },
+      },
+      {
+        name: 'Plage de l’Escalet',
+        kind: { en: 'Rocky cove', pt: 'Baía rochosa' },
+        distance: { en: '5 km · 10 min', pt: '5 km · 10 min' },
+      },
+      {
+        name: 'Gassin',
+        kind: { en: 'Hilltop village', pt: 'Vila na encosta' },
+        distance: { en: '8 km · 15 min', pt: '8 km · 15 min' },
+      },
+      {
+        name: 'Saint-Tropez',
+        kind: { en: 'Harbour and market', pt: 'Porto e mercado' },
+        distance: { en: '10 km · 20 min', pt: '10 km · 20 min' },
+      },
+      {
+        name: 'Toulon-Hyères',
+        kind: { en: 'Airport', pt: 'Aeroporto' },
+        distance: { en: '55 km · 1 hr', pt: '55 km · 1 hr' },
+      },
+      {
+        name: 'Nice Côte d’Azur',
+        kind: { en: 'Airport', pt: 'Aeroporto' },
+        distance: { en: '105 km · 1 hr 30', pt: '105 km · 1 hr 30' },
+      },
+    ],
+  },
+
+  rates: {
+    intro: {
+      en: 'Prices for the whole house, up to 8 guests, linen included.',
+      pt: 'Preços para a casa inteira, até 8 hóspedes, com toalhas incluídas.'
+    },
+    seasons: [
+      {
+        name: { en: 'Low season', pt: 'Baixa temporada' },
+        period: {
+          en: 'November to April, holidays excluded',
+          pt: 'Novembro a Abril, feriados excluídos'
+        },
+        nightly: 100,
+        minNights: 3,
+        ranges: [
+          ['11-01', '12-19'],
+          ['01-04', '04-30'],
+        ],
+      },
+      {
+        name: { en: 'Mid season', pt: 'Temporada intermediária' },
+        period: {
+          en: 'May, June, September and October',
+          pt: 'Maio, Junho, Setembro e Outubro'
+        },
+        nightly: 950,
+        minNights: 5,
+        ranges: [
+          ['05-01', '06-30'],
+          ['09-01', '10-31'],
+        ],
+      },
+      {
+        name: { en: 'High season', pt: 'Alta temporada' },
+        period: { en: 'July and August', pt: 'Julho e Agosto' },
+        nightly: 1450,
+        minNights: 7,
+        ranges: [['07-01', '08-31']],
+        note: {
+          en: 'Saturday to Saturday.',
+          pt: 'Sábado a Sábado.'
+        },
+      },
+      {
+        name: { en: 'Christmas and New Year', pt: 'Natal e Ano Novo' },
+        period: {
+          en: '20 December to 3 January',
+          pt: '20 de Dezembro a 3 de Janeiro'
+        },
+        nightly: 1100,
+        minNights: 5,
+        ranges: [['12-20', '01-03']],
+      },
+    ],
+    extras: [
+      {
+        label: { en: 'Final cleaning', pt: 'Limpeza final' },
+        value: { en: '€350', pt: '€350' },
+      },
+      {
+        label: { en: 'Security deposit', pt: 'Depósito de segurança' },
+        value: {
+          en: '€3,000, returned after departure',
+          pt: '€3,000, devolvido após a saída'
+        },
+      },
+      {
+        label: { en: 'Baby cot and high chair', pt: 'Criança e cadeira de alta' },
+        value: { en: 'Free', pt: 'Gratuito' },
+      },
+      {
+        label: { en: 'Dog (on request)', pt: 'Cão (sob solicitação)' },
+        value: { en: '€100 per stay', pt: '€100 por estadia' },
+      },
+    ],
+    touristTax: {
+      en: 'Set by the town, about €3 per adult per night, added to the balance. Free for under-18s.',
+      pt: 'Definido pela cidade, cerca de €3 por adulto por noite, adicionado ao saldo. Gratuito para menores de 18 anos.'
+    },
+    payment: {
+      en: '30% when booking, the balance 30 days before arrival, by bank transfer or card. Free cancellation up to 60 days before arrival.',
+      pt: '30% ao fazer a reserva, o saldo 30 dias antes da chegada, por transferência bancária ou cartão. Cancelamento gratuito até 60 dias antes da chegada.'
+    },
+  },
+
+  // Reviews are shown as the guests wrote them, in their own language.
+  reviews: [
+    {
+      author: 'Claire D.',
+      origin: { 
+        en: 'Lyon, France',
+        pt: 'Lyon, França'
+      },
+      date: '2026-08',
+      stayDate: '2026-08-08',
+      rating: 5,
+      lang: 'fr',
+      source: 'airbnb',
+      text: 'Une maison encore plus belle que sur les photos. La piscine face à la mer au réveil, les dîners sous la pergola, les plages à cinq minutes : nous avons déjà réservé l’été prochain.',
+    },
+    {
+      author: 'James W.',
+      origin: { 
+        en: 'London, United Kingdom',
+        pt: 'Londres, Reino Unido'
+      },
+      date: '2026-07',
+      stayDate: '2026-07-11',
+      rating: 5,
+      lang: 'en',
+      source: 'airbnb',
+      text: 'A beautifully designed house with a view you never tire of. Spotless, calm, and the owners’ restaurant tips were spot on. Perfect for our two families.',
+    },
+    {
+      author: 'Giulia R.',
+      origin: { 
+        en: 'Milan, Italy',
+        pt: 'Milão, Itália'
+      },
+      date: '2026-06',
+      stayDate: '2026-06-13',
+      rating: 5,
+      lang: 'it',
+      source: 'airbnb',
+      text: 'Villa curatissima, camere fresche e silenziose, terrazza meravigliosa. Proprietari gentilissimi e sempre disponibili. Torneremo di sicuro!',
+    },
+    {
+      author: 'Familie Becker',
+      origin: { 
+        en: 'Munich, Germany',
+        pt: 'Munique, Alemanha'
+      },
+      date: '2026-09',
+      stayDate: '2026-09-05',
+      rating: 5,
+      lang: 'de',
+      source: 'airbnb',
+      text: 'Ein traumhaftes Haus für unsere Familie mit drei Kindern. Der Pool ist ein Erlebnis, die Küche bestens ausgestattet und Pampelonne in wenigen Minuten erreichbar.',
+    },
+  ],
+
+  faq: [
+    {
+      question: {
+        en: 'How does booking direct work?',
+        pt: 'Como funciona a reserva direta?'
+      },
+      answer: {
+        en: 'Send your request with your dates. We reply within 24 hours with a quote and a rental agreement. Your booking is confirmed once we receive the 30% deposit.',
+        pt: 'Envie seu pedido com as datas. Responderemos dentro de 24 horas com uma cotação e um contrato de aluguel. Sua reserva é confirmada assim que recebermos o depósito de 30%.'
+      },
+    },
+    {
+      question: {
+        en: 'Why is it cheaper than booking through a platform?',
+        pt: 'Por que é mais barato do que reservar através de uma plataforma?'
+      },
+      answer: {
+        en: 'Platforms add service fees on top of the rental price. When you book direct, you only pay for the stay, the cleaning and the tourist tax.',
+        pt: 'As plataformas adicionam taxas de serviço sobre o preço do aluguel. Quando você reserva diretamente, você só paga pela estadia, a limpeza e o imposto turístico.'
+      },
+    },
+    {
+      question: {
+        en: 'Is the pool safe for children?',
+        pt: 'O piscina é segura para crianças?'
+      },
+      answer: {
+        en: 'Yes. It has a pool alarm, and a removable fence can be put up before you arrive.',
+        pt: 'Sim. Tem um alarme de piscina, e uma cerca removível pode ser colocada antes de você chegar.'
+      },
+    },
+    {
+      question: {
+        en: 'Do we need a car?',
+        pt: 'Precisamos de um carro?'
+      },
+      answer: {
+        en: 'It is best: the house sits on the hills, 2 km from the beach. The private car park holds three cars.', 
+        pt: 'É melhor: a casa fica nas colinas, a 2 km da praia. O estacionamento privado comporta três carros.'
+      },
+    },
+    {
+      question: {
+        en: 'Can we arrive late in the evening?',
+        pt: 'Podemos chegar tarde à noite?'
+      },
+      answer: {
+        en: 'Yes. We welcome you from 4 pm. After 8 pm, a key box is waiting for you with all the instructions.',
+        pt: 'Sim. Você é bem-vindo a partir das 16h. Após as 20h, uma caixa de chaves está esperando por você com todas as instruções.'
+      },
+    },
+    {
+      question: {
+        en: 'Is the house open all year round?',
+        pt: 'A casa está aberta o ano todo?'
+      },
+      answer: {
+        en: 'Yes, and it is heated in winter. Outside July and August, you can arrive on any day of the week.',
+        pt: 'Sim, e é aquecida no inverno. Fora de julho e agosto, você pode chegar em qualquer dia da semana.'
+      },
+    },
+  ],
+
+  rules: [
+    {
+      icon: 'clock',
+      title: { 
+        en: 'Times',
+        pt: 'Horários'
+      },
+      text: {
+        en: 'Check-in from 4 pm, check-out by 10 am.',
+        pt: 'Entrada a partir das 16h, saída até as 10h.'
+      },
+    },
+    {
+      icon: 'people',
+      title: { 
+        en: '8 guests at most',
+        pt: 'No máximo 8 hóspedes'
+      },
+      text: {
+        en: 'Friends are welcome during the day, with our agreement.',
+        pt: 'Amigos são bem-vindos durante o dia, com a nossa concordância.'
+      },
+    },
+    {
+      icon: 'music',
+      title: { 
+        en: 'No parties',
+        pt: 'Sem festas'
+      },
+      text: {
+        en: 'No parties or events, out of respect for the neighbours. Quiet after 10 pm.',
+        pt: 'Sem festas ou eventos, por respeito aos vizinhos. Silêncio após as 22h.'
+      },
+    },
+    {
+      icon: 'no-smoking',
+      title: { 
+        en: 'No smoking',
+        pt: 'Sem fumar'
+      },
+      text: {
+        en: 'No smoking indoors. Ashtrays are waiting for you on the terrace.',
+        pt: 'Não é permitido fumar em ambientes fechados. Cinzeiros estão disponíveis na terraço.'
+      },
+    },
+    {
+      icon: 'paw',
+      title: { 
+        en: 'Pets on request',
+        pt: 'Animais de estimação sob solicitação'
+      },
+      text: {
+        en: 'One calm dog is welcome with our agreement.',
+        pt: 'Um cão calmo é bem-vindo com a nossa concordância.',
+      },
+    },
+    {
+      icon: 'shield',
+      title: { 
+        en: 'Security deposit',
+        pt: 'Depósito de segurança'
+      },
+      text: {
+        en: '€3,000 held on your card, released within 7 days of departure.',
+        pt: '€3,000 mantido na sua carta, libertado dentro de 7 dias da saída.',
+      },
+    },
+  ],
+
+  // Legal notice and privacy pages (/legal/, /privacy/). Fill in your details: until then the
+  // pages show "[to complete]". Or set noticeUrl to a legal notice you already publish elsewhere.
+  // These pages are templates, not legal advice: have them checked for your country.
+  legal: {
+    // noticeUrl: 'https://your-company.example/legal-notice',
+    publisherName: 'Doce Mar Holiday Homes', // owner or company publishing the site
+    publisherAddress: 'Manta Rota, Vila Nova de Cacela, Portugal',
+    companyId: '', // company number (SIRET, VAT...), empty if none
+    publicationDirector: 'Sara Martins',
+    hostingProvider: {
+      name: 'Cloudflare, Inc.',
+      address: '101 Townsend St, San Francisco, CA 94107, USA',
+      website: 'https://www.cloudflare.com',
+    },
+    updated: '2026-11-01',
+  },
+});
