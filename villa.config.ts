@@ -78,7 +78,7 @@ export const villa = defineVilla({
     type: 'Apartment',
     tagline: {
       en: 'Three-bedroom apartment with sea views, 1 km from the beach',
-      pt: 'Apartamento T3 com vista mar, a 1 km da praia',
+      pt: 'Apartamento a 1 km da praia',
     },
     address: {
       street: 'Rua das Sete Casas',
@@ -107,11 +107,11 @@ export const villa = defineVilla({
     checkOut: '10:00',
     // France: tourist rental registration number (loi Le Meur). Shown in the footer.
     // Portugal: Numero do Registo Nacional de Alojamento Local (RNAL). Shown in the footer.
-    registrationNumber: '123456/AL',
+    registrationNumber: 'Em processamento',
   },
   contact: {
     hostName: 'Sara Martins',
-    email: 'martinssara@hotmail.fr',
+    email: 'info@casasdocemar.pt',
     phone: '+351 930563318',
     whatsapp: '930563318',
     hostLanguages: ['fr-FR', 'en-GB', 'pt-PT'],
@@ -136,7 +136,7 @@ export const villa = defineVilla({
     },
     description: {
       en: 'Book directly a three-bedroom apartment with sea views in Manta Rota, just 1 km from the beach, with balconies in every bedroom.',
-      pt: 'Alugue diretamente um apartamento de 3 quartos com vista mar em Manta Rota, a 1 km da praia, com varandas em cada quarto.',
+      pt: 'Alugue diretamente um apartamento de 2 quartos com vista mar em Manta Rota, a 1 km da praia, com varandas em cada quarto.',
     },
     shareImage: 'hero.png',
     // Google forbids marking up ratings copied from Airbnb or Booking.com: keep false unless
@@ -165,7 +165,7 @@ export const villa = defineVilla({
   },
 
   // Shown under the booking bar. Remove the block if you have no reviews yet.
-  rating: { value: 4.96, count: 38, source: 'Airbnb' },
+  // rating: { value: 4.96, count: 38, source: 'Airbnb' },
 
   house: {
     navLabel: { en: 'The house', pt: 'A casa' },
@@ -174,8 +174,8 @@ export const villa = defineVilla({
       pt: 'Tons de azul-marinho, madeira clara e a serenidade do mar.',
     },
     intro: {
-      en: 'Located in Manta Rota, this three-bedroom apartment offers lovely sea views, just 1 km from the beach. Every bedroom features its own balcony, creating the perfect spaces to enjoy the sea breeze and the tranquillity of the area.',
-      pt: 'Situado na Manta Rota, este apartamento T3 oferece uma agradável vista sobre o mar, a apenas 1 km da praia. Todos os quartos dispõem de varanda, criando espaços perfeitos para aproveitar a brisa do mar e a tranquilidade da região.',
+      en: 'Located in Manta Rota, this two-bedroom apartment offers lovely sea views, just 1 km from the beach. Every bedroom features its own balcony, creating the perfect spaces to enjoy the sea breeze and the tranquillity of the area.',
+      pt: 'Situado na Manta Rota, este apartamento T2 oferece uma agradável vista sobre o mar, a apenas 1 km da praia. Todos os quartos dispõem de varanda, criando espaços perfeitos para aproveitar a brisa do mar e a tranquilidade da região.',
     },
     images: ['living.jpg', 'terrace.jpg'],
     highlights: [
@@ -201,8 +201,8 @@ export const villa = defineVilla({
       },
       {
         title: { 
-          en: 'Three quiet badrooms',
-          pt: 'Três quartos tranquilos'
+          en: 'Two quiet badrooms',
+          pt: 'Dois quartos tranquilos'
         },
         text: {
           en: 'Every bedroom is amazing. With air conditioning and freshly laundered bed linen.',
@@ -221,14 +221,14 @@ export const villa = defineVilla({
       },
     ],
     facts: [
-      {
-        value: { en: '240 m²', pt: '240 m²' },
-        label: { en: 'of living space', pt: 'de espaço de convivência' },
-      },
-      {
-        value: { en: '3,000 m²', pt: '3.000 m²' },
-        label: { en: 'of garden', pt: 'de jardim' },
-      },
+      // {
+      //   value: { en: '240 m²', pt: '240 m²' },
+      //   label: { en: 'of living space', pt: 'de espaço de convivência' },
+      // },
+      // {
+      //   value: { en: '3,000 m²', pt: '3.000 m²' },
+      //   label: { en: 'of garden', pt: 'de jardim' },
+      // },
       {
         value: { en: '1 km', pt: '1 km' },
         label: { en: 'to the beach', pt: 'à praia' },
@@ -665,7 +665,7 @@ export const villa = defineVilla({
           en: 'November to April, holidays excluded',
           pt: 'Novembro a Abril, feriados excluídos'
         },
-        nightly: 200,
+        nightly: 100,
         minNights: 3,
         ranges: [
           ['11-01', '12-19'],
