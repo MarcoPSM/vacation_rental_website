@@ -94,13 +94,13 @@ export const villa = defineVilla({
     currency: 'EUR',
     capacity: {
       guests: 6,
-      bedrooms: 3,
+      bedrooms: 2,
       bathrooms: 2,
-      rooms: 3,
+      rooms: 4,
       areaM2: 140,
       beds: [
         { type: 'King', count: 2 },
-        { type: 'Queen', count: 1 },
+        // { type: 'Queen', count: 1 },
       ],
     },
     checkIn: '16:00',
@@ -151,12 +151,12 @@ export const villa = defineVilla({
       pt: 'A vista mar a partir do apartamento',
     },
     eyebrow: {
-      en: 'Holiday apartment · Manta Rota, Algarve',
-      pt: 'Apartamento para férias · Manta Rota, Algarve',
+      en: 'Manta Rota, Algarve',
+      pt: 'Manta Rota, Algarve',
     },
     title: {
-      en: 'An apartment with sea views in Manta Rota',
-      pt: 'Um apartamento com vista mar, na Manta Rota',
+      en: 'An apartment with sea views',
+      pt: 'Um apartamento com vista mar',
     },
     highlight: {
       en: 'Sea views',
